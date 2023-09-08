@@ -6,21 +6,17 @@
  *
  * Return: Always 0 (Sucess)
  */
+int main() {
+    char c = 'a';
 
-int main(void)
-{
-	char c;
+    while (c <= 'z') {
+        if (c != 'e' && c != 'q') {
+            putchar(c);
+        }
+        c++;
+    }
 
-	for (c = 'a' ; c <= 'z' ; c++)
-	{
-		if ((c == 'q' || c == 'e') != 1)
-		{
-			putchar(c);
-		}
+    putchar('\n');
 
-	}
-	putchar('\n');
-	return (0);
+    return 0;
 }
-
-
