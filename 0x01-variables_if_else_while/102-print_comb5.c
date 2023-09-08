@@ -1,43 +1,32 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
  *
- * Return: Always 0 (Succes)
+ *
+ * Return: Always 0 (Sucess)
  */
-
 int main(void)
 {
-	int tho;
-	int hun;
-	int ten;
-	int bas;
-
-for ( tho = 0 ; tho < 10 ; tho++)
-{	
-
-	for (hun = 0 ; hun <= 10 ; hun++)
+	int p, q;
+	for (p = 0; p <=98; p++)
 	{
-	
-		for (ten = 0 ; ten < 10 ; ten++)
+		for (q = p + 1; q <= 99; q++)
 		{
-			for ( bas = 0 ; bas < 10 ; bas++)
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+			if (p == 98 && q == 99)
 			{
-				putchar('0' + tho);
-				putchar('0' + hun);
-				putchar(32);
-				putchar('0' + ten);
-				putchar('0' + bas);
-				if (!(tho == 9 && hun == 8))
-				{
-					putchar(',');
-					putchar(32);
-				}
-				bas++;
+				continue;
 			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
-}
 	putchar('\n');
 	return (0);
 }
